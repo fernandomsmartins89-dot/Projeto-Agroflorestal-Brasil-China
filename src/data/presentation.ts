@@ -6,29 +6,29 @@ export interface Slide {
 }
 
 export const capexData = [
-  { year: "2027 (Ano 1)", valor: 3000000 },
-  { year: "2028 (Ano 2)", valor: 5000000 },
-  { year: "2029 (Ano 3)", valor: 3000000 },
-  { year: "2030 (Ano 4)", valor: 3000000 },
-  { year: "2031 (Ano 5)", valor: 3000000 },
+  { year: "2027/28 (Ano 1)", valor: 3000000 },
+  { year: "2028/29 (Ano 2)", valor: 5000000 },
+  { year: "2029/30 (Ano 3)", valor: 3000000 },
+  { year: "2030/31 (Ano 4)", valor: 3000000 },
+  { year: "2031/32 (Ano 5)", valor: 3000000 },
 ];
 
 export const opexData = [
   { period: "2028/29 (Talhão 1)", valor: 1000000 },
-  { period: "2029/30 (Talhão 2)", valor: 1000000 },
-  { period: "2030/31 (Talhão 3)", valor: 1000000 },
-  { period: "2031/32 (Talhão 4)", valor: 1000000 },
-  { period: "2032/33 (Talhão 5)", valor: 1000000 },
+  { period: "2029/30 (T 2)", valor: 1000000 },
+  { period: "2030/31 (T 3)", valor: 1000000 },
+  { period: "2031/32 (T 4)", valor: 1000000 },
+  { period: "2032/33 (T 5)", valor: 1000000 },
 ];
 
 export const consolidadoData = [
-  { year: "2027 (Ano 1)", capex: 3000000, opex: 0, total: 3000000 },
-  { year: "2028 (Ano 2)", capex: 5000000, opex: 500000, total: 5500000 },
-  { year: "2029 (Ano 3)", capex: 3000000, opex: 1000000, total: 4000000 },
-  { year: "2030 (Ano 4)", capex: 3000000, opex: 1000000, total: 4000000 },
-  { year: "2031 (Ano 5)", capex: 3000000, opex: 1000000, total: 4000000 },
-  { year: "2032 (Ano 6)", capex: 0, opex: 1000000, total: 1000000 },
-  { year: "2033 (Ano 7)", capex: 0, opex: 500000, total: 500000 },
+  { year: "2027/28 (Ano 1)", capex: 3000000, opex: 0, total: 3000000 },
+  { year: "2028/29 (Ano 2)", capex: 5000000, opex: 500000, total: 5500000 },
+  { year: "2029/30 (Ano 3)", capex: 3000000, opex: 1000000, total: 4000000 },
+  { year: "2030/31 (Ano 4)", capex: 3000000, opex: 1000000, total: 4000000 },
+  { year: "2031/32 (Ano 5)", capex: 3000000, opex: 1000000, total: 4000000 },
+  { year: "2032/33 (Ano 6)", capex: 0, opex: 1000000, total: 1000000 },
+  { year: "2033/34 (Ano 7)", capex: 0, opex: 500000, total: 500000 },
 ];
 
 export const comparativeMetrics = [

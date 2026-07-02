@@ -24,6 +24,7 @@ import {
   Activity,
   FileText,
   Users,
+  User,
   Compass,
   ArrowRight,
   TrendingDown,
@@ -132,7 +133,7 @@ export function PresentationDeck() {
     { name: "Introdução", desc: "Fazenda Macuco" },
     { name: "Análise Comparativa", desc: "Cana vs Consórcio" },
     { name: "Problemática", desc: "Fomento Necessário" },
-    { name: "Visão Geral", desc: "Métricas de Área" },
+    { name: "Fomento", desc: "Fazenda Macuco" },
     { name: "Implantação", desc: "Estrutura 5 Anos" },
     { name: "Produtividade", desc: "Estimativas Anuais" },
     { name: "CAPEX", desc: "Cronograma de Investimentos" },
@@ -296,7 +297,7 @@ export function PresentationDeck() {
               {/* SLIDE 1: CAPA */}
               {currentSlide === 0 && (
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-6">
-                  <div className="lg:col-span-8 flex flex-col gap-6 text-left">
+                  <div className="lg:col-span-7 flex flex-col gap-6 text-left">
                     <div className="flex flex-wrap gap-2">
                       <span className="bg-olive/10 text-olive px-3 py-1 rounded-full text-xs font-semibold">
                         PÓLO CACAU SP
@@ -327,21 +328,67 @@ export function PresentationDeck() {
                     </div>
                   </div>
 
-                  <div className="lg:col-span-4 relative flex justify-center items-center">
-                    <div className="relative w-72 h-72 rounded-full border-4 border-dashed border-olive/20 flex items-center justify-center p-6 animate-[spin_120s_linear_infinite]">
-                      <div className="absolute w-56 h-56 rounded-full bg-olive/10 flex items-center justify-center p-6">
-                        <div className="w-40 h-40 rounded-full bg-white shadow-elevation-3 flex flex-col items-center justify-center gap-2 text-center p-4">
-                          <Trees className="w-10 h-10 text-olive" />
-                          <span className="font-display text-xs font-bold text-olive-dark">Sustentabilidade Integrada</span>
+                  <div className="lg:col-span-5 flex flex-col gap-6 items-center justify-center">
+                    {/* Small spinning graphic & badges */}
+                    <div className="relative w-40 h-40 flex items-center justify-center shrink-0">
+                      {/* Rotating Dashed Border */}
+                      <div className="absolute inset-0 rounded-full border-2 border-dashed border-olive/25 animate-[spin_120s_linear_infinite]" />
+                      
+                      {/* Non-rotating Inner Content */}
+                      <div className="w-30 h-30 rounded-full bg-olive/5 flex items-center justify-center p-2.5 z-10">
+                        <div className="w-22 h-22 rounded-full bg-white shadow-elevation-2 flex flex-col items-center justify-center gap-0.5 text-center p-2">
+                          <Trees className="w-5 h-5 text-olive" />
+                          <span className="font-display text-[8px] font-bold text-olive-dark leading-tight">Sustentabilidade<br/>Integrada</span>
                         </div>
                       </div>
+                      
+                      {/* Floating Accent badges - smaller, absolute to the main non-rotating container so they don't rotate */}
+                      <div className="absolute -top-1 -right-1 bg-terracotta text-white font-bold px-2 py-0.5 rounded-xl shadow-elevation-1 text-[8px] z-10">
+                        CACAU
+                      </div>
+                      <div className="absolute -bottom-1 -left-1 bg-olive text-cream font-bold px-2 py-0.5 rounded-xl shadow-elevation-1 text-[8px] z-10">
+                        SERINGA
+                      </div>
                     </div>
-                    {/* Floating Accent badges */}
-                    <div className="absolute top-2 right-4 bg-terracotta text-white font-bold p-3 rounded-2xl shadow-elevation-2 text-xs">
-                      CACAU
-                    </div>
-                    <div className="absolute bottom-6 left-2 bg-olive text-cream font-bold p-3 rounded-2xl shadow-elevation-2 text-xs">
-                      SERINGA
+
+                    {/* Presenter Profile Card */}
+                    <div className="w-full p-5 rounded-2xl border border-olive/10 bg-white/50 backdrop-blur-md shadow-elevation-1 space-y-4 text-left">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-olive/15 to-olive/30 text-olive flex items-center justify-center border border-olive/20 shadow-inner shrink-0">
+                          <User className="w-6 h-6 text-olive" />
+                        </div>
+                        <div>
+                          <h3 className="font-display text-base font-black text-olive-dark leading-tight">
+                            Fernando Moscardo
+                          </h3>
+                          <p className="text-[11px] font-semibold text-olive/80">
+                            Engenheiro Agrônomo &bull; Especialista em Agricultura Orgânica e Regenerativa
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="pt-3 border-t border-olive/10">
+                        <span className="text-[9px] uppercase tracking-wider font-extrabold text-olive/75 block mb-2">
+                          Culturas Atuantes
+                        </span>
+                        <div className="flex flex-wrap gap-1.5">
+                          {[
+                            "Resina de Pinus Ellioti",
+                            "Cenoura",
+                            "Café",
+                            "Gado de Corte",
+                            "Cacau",
+                            "Seringueira"
+                          ].map((cultura) => (
+                            <span
+                              key={cultura}
+                              className="px-2.5 py-1 bg-white/80 text-olive-dark text-[10px] font-bold rounded-lg border border-olive/15 hover:bg-olive hover:text-white transition-all duration-200 shadow-sm cursor-default"
+                            >
+                              {cultura}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -370,7 +417,7 @@ export function PresentationDeck() {
                         </div>
                         <div>
                           <span className="text-[8px] uppercase tracking-widest font-extrabold text-olive/60 block leading-tight">Área Total</span>
-                          <span className="font-display font-black text-sm text-olive-dark">250 ha</span>
+                          <span className="font-display font-black text-sm text-olive-dark">2.500 ha</span>
                         </div>
                       </div>
                       <div className="bg-white/90 border border-olive/10 px-4 py-2 rounded-xl shadow-elevation-1 flex items-center gap-3">
@@ -379,7 +426,7 @@ export function PresentationDeck() {
                         </div>
                         <div>
                           <span className="text-[8px] uppercase tracking-widest font-extrabold text-olive/60 block leading-tight">Área Produtiva</span>
-                          <span className="font-display font-black text-sm text-olive">220 ha</span>
+                          <span className="font-display font-black text-sm text-olive">2.200 ha</span>
                         </div>
                       </div>
                       <div className="bg-white/90 border border-olive/10 px-4 py-2 rounded-xl shadow-elevation-1 flex items-center gap-3">
@@ -405,7 +452,7 @@ export function PresentationDeck() {
                           <h3 className="text-xs font-bold text-olive uppercase tracking-wider">Histórico & Transição</h3>
                         </div>
                         <p className="text-xs sm:text-sm text-olive-dark/90 leading-relaxed font-medium">
-                          A Fazenda macuco está localizada em nova granada SP com 250 ha de área total e 220 ha produtivo. Sempre foi uma fazenda produtora de látex hoje se encontra em fase de supressão das seringueiras após mais de 40 anos de extração.
+                          A Fazenda Macuco está localizada em Nova Granada SP com 2.500 ha de área total e 2.200 ha produtivo. Sempre foi uma fazenda produtora de látex, para a indústria Braslatex da família, e hoje se encontra em fase de supressão das seringueiras após mais de 40 anos de extração.
                         </p>
                       </div>
 
@@ -511,10 +558,10 @@ export function PresentationDeck() {
                       <div className="bg-gradient-to-r from-cream to-cream/30 border border-olive/15 border-l-4 border-l-olive rounded-2xl p-5 shadow-elevation-1">
                         <h4 className="text-xs font-bold text-olive uppercase tracking-wider mb-2 flex items-center gap-1.5">
                           <TrendingUp className="w-4 h-4 text-olive" />
-                          Racional do Consórcio & Estabilidade Financeira
+                          HISTORICO RURAL E FAMILIAR
                         </h4>
                         <p className="text-xs text-olive-dark/95 leading-relaxed">
-                          Porém proprietário não está animado com setor da cana e pensou em manter a produção de látex que a família já tem experiência. Podendo consorciar ele com cacau para ter outra fonte de renda e maior equilíbrio de altos e baixos valores de mercado das duas comodities, resultando em maior estabilidade financeira para os sangradores do látex quando o produto está com baixos valores.
+                          Embora o sobrenome Verdi seja amplamente conhecido nacionalmente pelo império fundado pelo Patriarca Waldemar Verdi (o Grupo Rodobens, fundado em 1949), a atuação do clã expandiu-se com enorme força para a produção agroindustrial. A transição das terras da família Verdi para a heveicultura reflete a própria história econômica da região de São José do Rio Preto. Após ciclos como o do algodão (no qual o patriarca chegou a ser conhecido como o "Rei do Algodão" entre as décadas de 1930 e 1940) e da pecuária. Temos todo potencial para fazer história nesta nova transição agropecuária para o Cacau consorciado com a seringueira.
                         </p>
                       </div>
                     </div>
@@ -658,7 +705,7 @@ export function PresentationDeck() {
                 <div className="space-y-6">
                   <div className="flex items-center gap-2 border-b border-olive/10 pb-4">
                     <Layers className="w-5 h-5 text-olive" />
-                    <h2 className="font-display text-2xl font-bold uppercase text-olive">Visão Geral do Projeto</h2>
+                    <h2 className="font-display text-2xl font-bold uppercase text-olive">FOMENTO FAZENDA MACUCO</h2>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -670,7 +717,7 @@ export function PresentationDeck() {
                         </div>
                         <p className="text-[10px] uppercase font-bold tracking-wider text-olive-dark/50">Área Total</p>
                       </div>
-                      <p className="font-display text-3xl font-extrabold text-olive-dark">250 ha</p>
+                      <p className="font-display text-3xl font-extrabold text-olive-dark">2.500 ha</p>
                     </div>
 
                     {/* Card 2: Area Produtiva */}
@@ -681,7 +728,7 @@ export function PresentationDeck() {
                         </div>
                         <p className="text-[10px] uppercase font-bold tracking-wider text-olive-dark/50">Área Produtiva</p>
                       </div>
-                      <p className="font-display text-3xl font-extrabold text-olive">220 ha</p>
+                      <p className="font-display text-3xl font-extrabold text-olive">2.200 ha</p>
                     </div>
 
                     {/* Card 3: SAF Integrado */}
@@ -1107,15 +1154,15 @@ export function PresentationDeck() {
                           </li>
                           <li className="flex items-center gap-3 bg-cream/30 p-3 rounded-xl border border-olive/5">
                             <div className="w-5 h-5 rounded-full bg-olive text-cream flex items-center justify-center text-xs">✓</div>
-                            <span>Acompanhamento Técnico</span>
+                            <span>Acompanhamento Técnico E Validação Governamental Através da CATI SJRP e Secretaria de Desenvolvimento do Estado de São Paulo</span>
                           </li>
                           <li className="flex items-center gap-3 bg-cream/30 p-3 rounded-xl border border-olive/5">
                             <div className="w-5 h-5 rounded-full bg-olive text-cream flex items-center justify-center text-xs">✓</div>
-                            <span>Alta escalabilidade</span>
+                            <span>Alta escalabilidade Em fazendas do grupo familiar e região</span>
                           </li>
                           <li className="flex items-center gap-3 bg-cream/30 p-3 rounded-xl border border-olive/5">
                             <div className="w-5 h-5 rounded-full bg-olive text-cream flex items-center justify-center text-xs">✓</div>
-                            <span>Industria Pós colheita – secagem (cacau do polo SJRP) efetivada</span>
+                            <span>Industria Pós colheita – Secagem (cacau do polo SJRP) efetivada</span>
                           </li>
                           <li className="flex items-center gap-3 bg-cream/30 p-3 rounded-xl border border-olive/5">
                             <div className="w-5 h-5 rounded-full bg-olive text-cream flex items-center justify-center text-xs">✓</div>
@@ -1171,6 +1218,14 @@ export function PresentationDeck() {
                         <h3 className="font-display text-4xl sm:text-5xl font-black bg-gradient-to-r from-olive via-olive-dark to-terracotta bg-clip-text text-transparent leading-tight">
                           Vamos fazer juntos?
                         </h3>
+                        <div className="border-l-2 border-terracotta/40 pl-3 py-1 space-y-1">
+                          <p className="text-base sm:text-lg font-bold text-olive-dark/90 leading-snug">
+                            Vamos fazer um Memorando de como isto pode acontecer !!
+                          </p>
+                          <p className="text-xs sm:text-sm font-semibold text-olive/80">
+                            Eng. Agr. Fernando Moscardo
+                          </p>
+                        </div>
                         <p className="text-xs sm:text-sm text-olive-dark/80 leading-relaxed max-w-2xl font-medium">
                           O Projeto Agroflorestal Brasil-China representa uma nova era para a Fazenda Macuco e para o polo de cacau de São José do Rio Preto. Ao unir a tradição da seringueira com a alta rentabilidade do cacau, criamos um modelo produtivo sustentável, resiliente ao mercado e com forte impacto socioeconômico. Junte-se a nós nesta transição ecológica e comercial.
                         </p>
@@ -1198,16 +1253,16 @@ export function PresentationDeck() {
 
                         {/* Email */}
                         <a
-                          href="mailto:contato@fazendamacuco.com.br"
+                          href="mailto:fernando.miqueletti@sp.gov.br"
                           className="flex items-center gap-4 bg-white/80 border border-olive/15 hover:border-olive hover:bg-olive/[0.01] p-5 rounded-2xl transition-all duration-300 group shadow-elevation-1 hover:shadow-elevation-2 hover:-translate-y-0.5"
                         >
                           <div className="w-12 h-12 rounded-xl bg-olive text-cream flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 transition-transform duration-300">
                             <Mail className="w-5 h-5" />
                           </div>
-                          <div>
+                          <div className="min-w-0 flex-1">
                             <span className="text-[9px] text-olive/80 font-extrabold uppercase tracking-widest block mb-0.5">Enviar E-mail</span>
-                            <span className="text-base font-bold text-olive-dark group-hover:text-olive transition-colors">
-                              contato@fazendamacuco.com.br
+                            <span className="text-xs sm:text-base font-bold text-olive-dark group-hover:text-olive transition-colors block truncate" title="fernando.miqueletti@sp.gov.br">
+                              fernando.miqueletti@sp.gov.br
                             </span>
                           </div>
                         </a>
@@ -1227,7 +1282,7 @@ export function PresentationDeck() {
                         <ul className="space-y-3 mt-6 text-xs font-semibold">
                           <li className="flex items-center gap-3 bg-white/5 border border-white/10 p-3 rounded-xl backdrop-blur-sm hover:bg-white/10 transition-all duration-200">
                             <CheckCircle2 className="w-4 h-4 text-cream shrink-0" />
-                            <span>220 ha de Área Produtiva Integrada</span>
+                            <span>2.200 ha de Área Produtiva Integrada</span>
                           </li>
                           <li className="flex items-center gap-3 bg-white/5 border border-white/10 p-3 rounded-xl backdrop-blur-sm hover:bg-white/10 transition-all duration-200">
                             <CheckCircle2 className="w-4 h-4 text-cream shrink-0" />
