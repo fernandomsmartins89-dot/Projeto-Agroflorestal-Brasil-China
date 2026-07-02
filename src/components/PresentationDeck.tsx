@@ -417,7 +417,7 @@ export function PresentationDeck() {
                         </div>
                         <div>
                           <span className="text-[8px] uppercase tracking-widest font-extrabold text-olive/60 block leading-tight">Área Total</span>
-                          <span className="font-display font-black text-sm text-olive-dark">2.500 ha</span>
+                          <span className="font-display font-black text-sm text-olive-dark">250 ha</span>
                         </div>
                       </div>
                       <div className="bg-white/90 border border-olive/10 px-4 py-2 rounded-xl shadow-elevation-1 flex items-center gap-3">
@@ -426,7 +426,7 @@ export function PresentationDeck() {
                         </div>
                         <div>
                           <span className="text-[8px] uppercase tracking-widest font-extrabold text-olive/60 block leading-tight">Área Produtiva</span>
-                          <span className="font-display font-black text-sm text-olive">2.200 ha</span>
+                          <span className="font-display font-black text-sm text-olive">220 ha</span>
                         </div>
                       </div>
                       <div className="bg-white/90 border border-olive/10 px-4 py-2 rounded-xl shadow-elevation-1 flex items-center gap-3">
@@ -452,7 +452,7 @@ export function PresentationDeck() {
                           <h3 className="text-xs font-bold text-olive uppercase tracking-wider">Histórico & Transição</h3>
                         </div>
                         <p className="text-xs sm:text-sm text-olive-dark/90 leading-relaxed font-medium">
-                          A Fazenda Macuco está localizada em Nova Granada SP com 2.500 ha de área total e 2.200 ha produtivo. Sempre foi uma fazenda produtora de látex, para a indústria Braslatex da família, e hoje se encontra em fase de supressão das seringueiras após mais de 40 anos de extração.
+                          A Fazenda Macuco está localizada em Nova Granada SP com 250 ha de área total e 220 ha produtivo. Sempre foi uma fazenda produtora de látex, para a indústria Braslatex da família, e hoje se encontra em fase de supressão das seringueiras após mais de 40 anos de extração. Esta é uma das fazendas da Família Verdi e do braço agrícola do Grupo Rodobens que possuem mais de 5.000 ha de seringueira na região.
                         </p>
                       </div>
 
@@ -717,7 +717,7 @@ export function PresentationDeck() {
                         </div>
                         <p className="text-[10px] uppercase font-bold tracking-wider text-olive-dark/50">Área Total</p>
                       </div>
-                      <p className="font-display text-3xl font-extrabold text-olive-dark">2.500 ha</p>
+                      <p className="font-display text-3xl font-extrabold text-olive-dark">250 ha</p>
                     </div>
 
                     {/* Card 2: Area Produtiva */}
@@ -728,7 +728,7 @@ export function PresentationDeck() {
                         </div>
                         <p className="text-[10px] uppercase font-bold tracking-wider text-olive-dark/50">Área Produtiva</p>
                       </div>
-                      <p className="font-display text-3xl font-extrabold text-olive">2.200 ha</p>
+                      <p className="font-display text-3xl font-extrabold text-olive">220 ha</p>
                     </div>
 
                     {/* Card 3: SAF Integrado */}
@@ -1166,7 +1166,7 @@ export function PresentationDeck() {
                           </li>
                           <li className="flex items-center gap-3 bg-cream/30 p-3 rounded-xl border border-olive/5">
                             <div className="w-5 h-5 rounded-full bg-olive text-cream flex items-center justify-center text-xs">✓</div>
-                            <span>Futuro parceiro comercial para exportação</span>
+                            <span>Futuro parceiro comercial para exportação (Barter)</span>
                           </li>
                         </ul>
                       </div>
@@ -1215,14 +1215,14 @@ export function PresentationDeck() {
                           <span className="w-2 h-2 rounded-full bg-olive animate-ping" />
                           Oportunidade de Fomento
                         </span>
-                        <h3 className="font-display text-4xl sm:text-5xl font-black bg-gradient-to-r from-olive via-olive-dark to-terracotta bg-clip-text text-transparent leading-tight">
-                          Vamos fazer juntos?
-                        </h3>
-                        <div className="border-l-2 border-terracotta/40 pl-3 py-1 space-y-1">
-                          <p className="text-base sm:text-lg font-bold text-olive-dark/90 leading-snug">
-                            Vamos fazer um Memorando de como isto pode acontecer !!
+                        <div>
+                          <h3 className="font-display text-4xl sm:text-5xl font-black bg-gradient-to-r from-olive via-olive-dark to-terracotta bg-clip-text text-transparent leading-tight">
+                            Vamos fazer juntos?
+                          </h3>
+                          <p className="font-display text-lg sm:text-xl font-bold text-olive/90 mt-2">
+                            vamos fazer um Memorando de como isto pode acontecer !!
                           </p>
-                          <p className="text-xs sm:text-sm font-semibold text-olive/80">
+                          <p className="text-xs sm:text-sm font-semibold text-olive-dark/60 mt-1">
                             Eng. Agr. Fernando Moscardo
                           </p>
                         </div>
@@ -1282,7 +1282,7 @@ export function PresentationDeck() {
                         <ul className="space-y-3 mt-6 text-xs font-semibold">
                           <li className="flex items-center gap-3 bg-white/5 border border-white/10 p-3 rounded-xl backdrop-blur-sm hover:bg-white/10 transition-all duration-200">
                             <CheckCircle2 className="w-4 h-4 text-cream shrink-0" />
-                            <span>2.200 ha de Área Produtiva Integrada</span>
+                            <span>220 ha de Área Produtiva Integrada</span>
                           </li>
                           <li className="flex items-center gap-3 bg-white/5 border border-white/10 p-3 rounded-xl backdrop-blur-sm hover:bg-white/10 transition-all duration-200">
                             <CheckCircle2 className="w-4 h-4 text-cream shrink-0" />
