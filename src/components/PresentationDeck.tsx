@@ -452,7 +452,7 @@ export function PresentationDeck() {
                           <h3 className="text-xs font-bold text-olive uppercase tracking-wider">Histórico & Transição</h3>
                         </div>
                         <p className="text-xs sm:text-sm text-olive-dark/90 leading-relaxed font-medium">
-                          A Fazenda Macuco está localizada em Nova Granada SP com 250 ha de área total e 220 ha produtivo. Sempre foi uma fazenda produtora de látex, para a indústria Braslatex da família, e hoje se encontra em fase de supressão das seringueiras após mais de 40 anos de extração. Esta é uma das fazendas da Família Verdi e do braço agrícola do Grupo Rodobens que possuem mais de 5.000 ha de seringueira na região.
+                          A Fazenda Macuco está localizada em Nova Granada SP com 250 ha de área total e 220 ha produtivo. Sempre foi uma fazenda produtora de látex, para a indústria Braslatex da família, e hoje se encontra em fase de supressão das seringueiras após mais de 40 anos de extração. Esta é uma das fazendas da Família Verdi e do braço agrícola do Grupo Rodobens que possuem mais de 2.500 ha de seringueira na região.
                         </p>
                       </div>
 
